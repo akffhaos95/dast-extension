@@ -1,0 +1,23 @@
+#content-script {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    font-size: 18px;
+    background: black;
+    color: white;
+    z-index: 2147483647;
+}
+
+h3.todoCount { 
+    color: hotpink;
+}
+
+h3.todo {
+    color: greenyellow;
+    font-size: 5px;
+}
+
+
+
+
+
