@@ -68,9 +68,7 @@ const TodoList = createReactClass({
 
 const Todo = createReactClass({
     render: function () {
-        return (
-            ce('h3', { className: "todo" }, `${this.props.todo.id} ${this.props.todo.title}`)
-        )
+        return ce('h3', { className: "todo" }, `${this.props.todo.id} ${this.props.todo.title}`)
     }
 })
 
@@ -95,9 +93,7 @@ const TodoForm = createReactClass({
         e.preventDefault();
         axios.get(`https://jsonplaceholder.typicode.com/todos?userId=${this.state.uid}`)
             .then((res) => {
-                console.log(res)
-                console.log(res.data)
-                this.props.setTodoState({ todoList: res.data })
+                this.props.setTodoState(res.data)
             })
             .catch((err) => console.log(err))
     },
