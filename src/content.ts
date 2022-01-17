@@ -58,11 +58,13 @@ const TodoDiv = createReactClass({
 
 const TodoList = createReactClass({
     render: function () {
+        const isEmpty = !(this.props.todoList.length === 0)
+
         const todos: typeof Todo = []
         this.props.todoList.map((todo: ResultJson) => {
             todos.push(ce(Todo, { todo: todo }))
         })
-        return ce('div', { className: "todoList" }, todos)
+        return ce('div', { className: "todoList" }, isEmpty ? todos : "this is empty")
     }
 })
 
